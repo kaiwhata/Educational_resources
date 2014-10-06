@@ -1,0 +1,18 @@
+\documentclass[border=2]{standalone}
+
+\usepackage[siunitx]{circuitikz}
+
+\begin{document}
+\begin{circuitikz} \draw
+(0,0) to[battery,  l=5<\volt>] (0,4)
+      (0,4) -- (2,4)
+      to[resistor, l=34<\ohm>] (2,2) 
+      to[resistor, l=66<\ohm>] (2,0)
+      -- (0,0)
+      %adding voltage lines
+      (2,4) to[short,*-o, l=5<\volt>] (4,4)
+      (2,2) to[short,*-o, l=3.3<\volt>] (4,2)
+      (2,0) to[short,*-o, l_=0<\volt>] (4,0)
+;
+\end{circuitikz}
+\end{document}
