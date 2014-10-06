@@ -10,7 +10,7 @@ var force = d3.layout.force()
 
 var svg = d3.select("#cloud");
 
-d3.json("cloud.json", function(json) {
+d3.json("https://raw.githubusercontent.com/kaiwhata/Educational_resources/master/talent_tree/directed_graph/cloud.json", function(json) {
     force
         .nodes(json.nodes)
         .links(json.links)
