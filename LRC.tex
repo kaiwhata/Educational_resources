@@ -1,0 +1,14 @@
+\documentclass[border=2]{standalone}
+
+\usepackage[siunitx]{circuitikz}
+
+\begin{document}
+\begin{circuitikz} \draw
+(0,0) -- (0,3)
+(0,3) to[C, l=5<\micro \farad>](3,3)
+(3,3) to[R, l=R]( (3,0)
+(3,0) to[L, l=10<\milli \henry>]( (0,0)
+
+;
+\end{circuitikz}
+\end{document}
